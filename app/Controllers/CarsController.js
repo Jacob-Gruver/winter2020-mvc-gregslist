@@ -17,8 +17,9 @@ export default class CarsController {
     ProxyState.on("cars", _drawCars)
     _drawCars()
   }
-
+ 
   createCar() {
+    debugger
     window.event.preventDefault()
     console.log("creating car", 1)
     let form = window.event.target

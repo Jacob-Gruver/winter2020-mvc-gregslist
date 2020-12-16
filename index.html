@@ -59,6 +59,38 @@
         </div>
         <div class="row" id="cars">
         </div>
+        <div class="row mt-2">
+            <div class="col text-right">
+              <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#new-house-modal"> + </button>
+              <div class="modal fade" id="new-house-modal" tabindex="-1" role="dialog" area-labelledBy="modelTitleId" area-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title">New House Form</h5>
+                              <button type="button" class="close" data-dismiss="modal" area-label="Close">
+                                  <span area-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              <form onsubmit="app.houseController.addHouse()">
+                                <input type="text" id="acre" placeholder="acre" required>
+                                <input type="text" id="year" placeholder="year" required>
+                                <input type="text" id="address" placeholder="address" required>
+                                <input type="number" id="price" placeholder="price" required min="1">
+                                <input type="text" id="description" placeholder="description">
+                                <input type="text" id="imgUrl" placeholder="Image Url">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>  
+            </div>
+        </div>
+        <div class="row" id="houses"></div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
