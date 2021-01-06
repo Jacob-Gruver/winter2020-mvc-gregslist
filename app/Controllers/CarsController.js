@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { carsService } from "../Services/CarsService.js"
+// request api from axiosservice
 
 function _drawCars() {
   console.log(5)
@@ -14,12 +15,17 @@ function _drawCars() {
 
 export default class CarsController {
   constructor() {
+    debugger
     ProxyState.on("cars", _drawCars)
     _drawCars()
+    // set this.getCars() to axcess the axios. use this.funct to axcess a property within a class
   }
+
+  // add getCars() to call for the information
+
+  // add a create car that await api.post("", new object) trigger our listeners
  
   createCar() {
-    debugger
     window.event.preventDefault()
     console.log("creating car", 1)
     let form = window.event.target

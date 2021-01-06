@@ -16,3 +16,7 @@ class CarsService {
 }
 // Singleton Pattern
 export const carsService = new CarsService()
+
+/*
+set a try in getCars to "try" to get the cars information. set the new information within the appstate and map it as a new car casting it to new car
+*/ 
